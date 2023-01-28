@@ -84,3 +84,64 @@
     width: 200px;
   }
   
+/* =========== CAROUSEL =================== */
+.carousel{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+  }
+  .inactive{
+    display: none;
+  }
+  .active{
+    display: block;
+  }
+  
+  .carousel-banner-box{
+    background-size: cover;
+   margin: auto;
+   width: 100vw;
+   height: 60vh;
+   
+}
+
+.banner-img{
+    object-fit: cover;
+    object-position: center;
+    margin: auto;
+    height:60vh;
+    width: 100vw;
+}
+
+.carousel-caption{
+  position: absolute;
+  bottom:1%;
+  text-align: center;
+  width: 100%;
+}
+.carousel-caption h1{
+    color:goldenrod;
+    font-family: 'Great Vibes', cursive;
+    font-style: italic;
+    font-size: 3.5em;
+    text-shadow: 3px 3px 5px #000000;
+    text-align: center;
+    
+}
+
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 2s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .2} 
+    to {opacity: 1}
+  }
+  
