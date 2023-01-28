@@ -60,6 +60,14 @@
             </div>
 
         </nav>
-    </header>
+</header>
+    <main>
+    <?php
+    include_once 'CarouselClass.php' ;
+     $carouselClass = new CarouselClass;
+     $carousel =$carouselClass->showCarousel();
+     echo $carousel;
+    ?>
+    </main>
 </body>
 </html>
