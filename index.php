@@ -21,7 +21,7 @@
         <nav class='navbar-nav' id='menu'>
 
             <div class='logo-box'>
-                <img src='HandMadeCarousel.png' alt='Logo..missing' class='logo-img'>
+                <img src='img/HandMadeCarousel.png' alt='Logo..missing' class='logo-img'>
 
             </div>
 
@@ -64,6 +64,7 @@
     <main>
     <?php
     include_once 'CarouselClass.php' ;
+    
      $carouselClass = new CarouselClass;
      $carousel =$carouselClass->showCarousel();
      echo $carousel;

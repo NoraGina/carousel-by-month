@@ -1,39 +1,43 @@
-let slideIndex = 0;
-function showSlides(n){
-    let i;
-    let slides = document.querySelectorAll(".carousel-item");
-  
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
+// let slideIndex = 1; 
+// let i;
+// let slides = document.querySelectorAll(".carousel-item");
+
+// auto();
+
+
+// function showSlides(n) {
+//     console.log(slides.length);
+//   if (n > slides.length) {slideIndex = 1}    
+//   if (n < 1) {slideIndex = slides.length}
+//   for (i = 0; i < slides.length; i++) {
      
-        // slides[i].style.display = "none";
-        slides[i].classList.add('inactive');
-    }
-   
-    slideIndex ++;
-    // slides[slideIndex-1].style.display = "block";
-    slides[slideIndex-1].classList.remove('inactive');
-    slides[slideIndex-1].classList.add('active');
-    
-  }
-  function plusSlides(n){
-    clearInterval(myTimer);
-    if (n < 0){
-      console.log(slides.length);
-      showSlides(slideIndex -= 1);
-    } else {
-      console.log(slides.length);
-     showSlides(slideIndex += 1); 
-    }
-    if (n === -1){
-      myTimer = setInterval(function(){plusSlides(n + 2)}, 5000);
-    } else {
-      myTimer = setInterval(function(){plusSlides(n + 1)}, 5000);
-    }
-  }
+//     slides[i].classList.remove("active");
+//   }
   
-  window.addEventListener("load",function() {
-    showSlides(slideIndex);
-    myTimer = setInterval(function(){plusSlides(1)}, 4000);
-  })
+  
+//   slides[slideIndex-1].classList.add('active'); 
+  
+ 
+// }
+
+// function auto() {
+//   slideIndex++;
+//   if (slideIndex > slides.length) {slideIndex = 1}
+//   showSlides(slideIndex);
+//   console.log(slides[slideIndex]); 
+//   setTimeout(auto, 4000);
+// }
+let indexValue = 0;
+  function slideShow(){
+           setTimeout(slideShow, 3500);
+       let x;
+          const img = document.querySelectorAll(".carousel-item");
+           for(x = 0; x < img.length; x++){
+             img[x].style.display = "none";
+            }
+            indexValue++;
+            if(indexValue > img.length){indexValue = 1}
+            img[indexValue -1].style.display = "block";
+            console.log(img[indexValue]);
+          }
+         slideShow();
